@@ -16,19 +16,39 @@ struct ContentView: View {
             GeometryReader { geometry in
                 VStack {
                     Spacer()
-                    Text("Home")
+                    Text("Wait update...")
                     Spacer()
                     HStack {
-                        Image(systemName: "server.rack")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: geometry.size.width/2, height: geometry.size.height/20)
-                            .padding(.top, 10)
+                        ButtonForCustomBar(widthIcon: geometry.size.width/2, heightIcon: geometry.size.height/20, systemIconName: "list.bullet.rectangle.portrait")
+                            .onTapGesture {
+                                print("Button List Create") //???
+                            }
+                        ZStack {
+                             Circle()
+                                 .foregroundColor(.white)
+                                 .frame(width: geometry.size.width/7, height: geometry.size.width/7)
+                                 .shadow(radius: 10)
+                            Image(systemName: "plus.circle.fill")
+                                     .resizable()
+                                     .aspectRatio(contentMode: .fit)
+                                     .frame(width: geometry.size.width/7-6 , height: geometry.size.width/7-6)
+                                     .foregroundColor(.purple)
+                         }
+                         .offset(y: -geometry.size.height/8/2)
+                         .onTapGesture {
+                             print("Button Plus Create") //???
+                         }
+                        
+                        ButtonForCustomBar(widthIcon: geometry.size.width/2, heightIcon: geometry.size.height/20, systemIconName: "gearshape")
+                            .onTapGesture {
+                                print("Button Settings Create") //???
+                            }
                     }
                     .frame(width: geometry.size.width, height: geometry.size.height/8)
-                    .background(colorCustomBar.shadow(radius: 2))
+                    .background(colorCustomBar.shadow(radius: 15))
                     
                 }
+                .edgesIgnoringSafeArea(.bottom)
             }
         }
     }

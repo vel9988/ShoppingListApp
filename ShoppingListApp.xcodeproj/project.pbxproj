@@ -12,7 +12,7 @@
 		EAAC89EE283E4F16006C641D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAAC89ED283E4F16006C641D /* Assets.xcassets */; };
 		EAAC89F1283E4F16006C641D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAAC89F0283E4F16006C641D /* Preview Assets.xcassets */; };
 		EAAC89F9283E539A006C641D /* BackgroundMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC89F8283E539A006C641D /* BackgroundMainView.swift */; };
-		EAAC89FB283E608B006C641D /* CustomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC89FA283E608B006C641D /* CustomBar.swift */; };
+		EAAC89FB283E608B006C641D /* ButtonForCustomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC89FA283E608B006C641D /* ButtonForCustomBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +22,7 @@
 		EAAC89ED283E4F16006C641D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAAC89F0283E4F16006C641D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EAAC89F8283E539A006C641D /* BackgroundMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMainView.swift; sourceTree = "<group>"; };
-		EAAC89FA283E608B006C641D /* CustomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBar.swift; sourceTree = "<group>"; };
+		EAAC89FA283E608B006C641D /* ButtonForCustomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonForCustomBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 			children = (
 				EAAC89EB283E4F12006C641D /* ContentView.swift */,
 				EAAC89F8283E539A006C641D /* BackgroundMainView.swift */,
-				EAAC89FA283E608B006C641D /* CustomBar.swift */,
+				EAAC89FA283E608B006C641D /* ButtonForCustomBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,7 +153,7 @@
 			files = (
 				EAAC89EC283E4F12006C641D /* ContentView.swift in Sources */,
 				EAAC89EA283E4F12006C641D /* ShoppingListAppApp.swift in Sources */,
-				EAAC89FB283E608B006C641D /* CustomBar.swift in Sources */,
+				EAAC89FB283E608B006C641D /* ButtonForCustomBar.swift in Sources */,
 				EAAC89F9283E539A006C641D /* BackgroundMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
