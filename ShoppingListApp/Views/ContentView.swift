@@ -62,8 +62,6 @@ struct ContentView: View {
                     .edgesIgnoringSafeArea(.bottom)
                 }
             }
-            
-            
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button {
