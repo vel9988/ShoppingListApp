@@ -14,7 +14,7 @@ struct AddListView: View {
     
     var body: some View {
         ZStack {
-            BackgroundMainView()
+            Background()
             VStack {
                 TextField("Имя списка", text: $newListName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -24,9 +24,11 @@ struct AddListView: View {
                     ControlButton(name: "Назад") {
                         dismiss()
                     }
+                    .buttonStyle(GrowingButton())
                     ControlButton(name: "Создать") {
                         print("Создать")
                     }
+                    .buttonStyle(GrowingButton())
                 }
             }
         }
@@ -43,9 +45,23 @@ struct ControlButton: View {
             action()
         }
         .padding()
-        .background(Color(red: 0, green: 0, blue: 0.8))
+        .background(.blue)
         .foregroundColor(.white)
         .clipShape(Capsule())
+
+    }
+    
+}
+
+struct GrowingButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+//            .padding()
+//            .background(.blue)
+//            .foregroundColor(.white)
+//            .clipShape(Capsule())
+            .scaleEffect(configuration.isPressed ? 1.2 : 1)
+            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
     }
 }
 
