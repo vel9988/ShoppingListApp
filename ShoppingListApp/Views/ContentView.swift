@@ -11,6 +11,7 @@ struct ContentView: View {
     private let colorCustomBar = (Color(#colorLiteral(red: 1, green: 0.3764705955982208, blue: 0.3764705955982208, alpha: 1)))
     
     @StateObject var viewRouter: ViewRouter
+    @State private var showingCreateList = false
 
     
     var body: some View {
@@ -42,12 +43,12 @@ struct ContentView: View {
                                 Image(systemName: "plus.circle.fill")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(width: geometry.size.width/7-6 , height: geometry.size.width/7-6)
+                                    .frame(width: geometry.size.width/7-6 , height: geometry.size.height/7-6)
                                     .foregroundColor(.purple)
                             }
                             .offset(y: -geometry.size.height/8/2)
                             .onTapGesture {
-                                print("Button Plus Create") //???
+                                showingCreateList = true
                             }
                             
                             ButtonForCustomBar(widthIcon: geometry.size.width/2, heightIcon: geometry.size.height/20, systemIconName: "gearshape")
@@ -55,6 +56,9 @@ struct ContentView: View {
                                     print("Button Settings Create") //???
                                 }
                         }
+                        .sheet(isPresented: $showingCreateList, content: {
+                            AddListView()
+                        })
                         .frame(width: geometry.size.width, height: geometry.size.height/8)
                         .background(colorCustomBar.shadow(radius: 15))
                         
@@ -65,7 +69,7 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button {
-                        print("OK")
+                        print("Account")
                     } label: {
                         Image(systemName: "person.fill")
                             .resizable()
@@ -76,6 +80,20 @@ struct ContentView: View {
                 }
             }
         }
+    }
+}
+
+//MARK: - ButtonForCustomBar
+struct ButtonForCustomBar: View {
+    let widthIcon, heightIcon: CGFloat
+    let systemIconName: String
+    
+    var body: some View {
+        Image(systemName: systemIconName)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: widthIcon, height: heightIcon)
+            .foregroundColor(.white)
     }
 }
 
