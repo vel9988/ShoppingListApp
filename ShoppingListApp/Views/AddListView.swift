@@ -26,7 +26,7 @@ struct AddListView: View {
                     }
                     .buttonStyle(GrowingButton())
                     ControlButton(name: "Создать") {
-                        print("Создать")
+                        print("Создать") //????
                     }
                     .buttonStyle(GrowingButton())
                 }

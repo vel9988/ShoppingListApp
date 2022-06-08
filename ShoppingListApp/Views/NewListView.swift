@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct NewListView: View {
+    
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -19,7 +21,7 @@ struct NewListView: View {
                             .frame(width: geometry.size.width/4, height: geometry.size.height/5)
                             .foregroundColor(.white)
                             .padding()
-                        Text("Создайте первый список просто нажмите на пурпурную кнопку")
+                        Text("Начните добавлять товары")
                             .foregroundColor(.white)
                             .multilineTextAlignment(.center)
                             .frame(width: geometry.size.width/2, alignment: .center)

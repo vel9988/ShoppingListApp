@@ -10,8 +10,7 @@ import SwiftUI
 struct ContentView: View {
     private let colorCustomBar = (Color(#colorLiteral(red: 1, green: 0.3764705955982208, blue: 0.3764705955982208, alpha: 1)))
     
-    @StateObject var viewRouter: ViewRouter
-    @State private var showingCreateList = false
+    @StateObject private var mainVM = MainVM()
     
     var body: some View {
         NavigationView {
@@ -19,37 +18,42 @@ struct ContentView: View {
                 Background()
                 GeometryReader { geometry in
                     VStack {
-                        Image(systemName: "list.bullet.rectangle.portrait.fill")
-                            .resizable()
-                            .frame(width: geometry.size.width/4, height: geometry.size.height/5)
-                            .foregroundColor(.white)
-                            .padding()
-                        Text("Создайте первый список просто нажмите на пурпурную кнопку")
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
-                            .frame(width: geometry.size.width/2, alignment: .center)
+                        Section {
+                            Image(systemName: "list.bullet.rectangle.portrait.fill")
+                                .resizable()
+                                .frame(width: geometry.size.width/4, height: geometry.size.height/5)
+                                .foregroundColor(.white)
+                                .padding()
+                            Text("Создайте первый список просто нажмите на кнопку с плюсом")
+                                .foregroundColor(.white)
+                                .multilineTextAlignment(.center)
+                                .frame(width: geometry.size.width/2, alignment: .center)
+                        }
                         Spacer()
                         HStack {
-                            ButtonForCustomBar(widthIcon: geometry.size.width/2, heightIcon: geometry.size.height/20, systemIconName: "list.bullet.rectangle.portrait")
-                                .onTapGesture {
+                            MenuButton(
+                                iconName: "list.bullet.rectangle.portrait",
+                                widthIcon: geometry.size.width/2,
+                                heightIcon: geometry.size.height/20) {
                                     print("Button List Create") //???
                                 }
                             AddButton(buttonSize: geometry.size.width/7) {
-                                showingCreateList = true
+                                mainVM.showingCreateList = true
                             }
                             .offset(y: -geometry.size.height/8/2)
-                            
-                            ButtonForCustomBar(widthIcon: geometry.size.width/2, heightIcon: geometry.size.height/20, systemIconName: "gearshape")
-                                .onTapGesture {
+                            MenuButton(
+                                iconName: "gearshape",
+                                widthIcon: geometry.size.width/2,
+                                heightIcon: geometry.size.height/20) {
                                     print("Button Settings Create") //???
                                 }
+                            
                         }
-                        .sheet(isPresented: $showingCreateList, content: {
-                            AddListView()
-                        })
                         .frame(width: geometry.size.width, height: geometry.size.height/8)
                         .background(colorCustomBar.shadow(radius: 15))
-                        
+                        .sheet(isPresented: $mainVM.showingCreateList) {
+                            AddListView()
+                        }
                     }
                     .edgesIgnoringSafeArea(.bottom)
                 }
@@ -71,27 +75,12 @@ struct ContentView: View {
     }
 }
 
-//MARK: - ButtonForCustomBar
-struct ButtonForCustomBar: View {
-    let widthIcon, heightIcon: CGFloat
-    let systemIconName: String
-    
-    var body: some View {
-        Image(systemName: systemIconName)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: widthIcon, height: heightIcon)
-            .foregroundColor(.white)
-    }
-}
-
-
 
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewRouter: ViewRouter())
+        ContentView()
             .previewInterfaceOrientation(.portrait)
     }
 }

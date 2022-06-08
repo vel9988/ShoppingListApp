@@ -9,25 +9,31 @@
 /* Begin PBXBuildFile section */
 		EA02709528461DAA0031914A /* NewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02709428461DAA0031914A /* NewListView.swift */; };
 		EA0270982846376A0031914A /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0270972846376A0031914A /* AddButton.swift */; };
+		EA02709A284643F00031914A /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA027099284643F00031914A /* MenuButton.swift */; };
+		EA43D6DA284F7B7900E118D4 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA43D6D9284F7B7900E118D4 /* MainVM.swift */; };
+		EA43D6DC284F7BAE00E118D4 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA43D6DB284F7BAE00E118D4 /* FileManager-DocumentsDirectory.swift */; };
+		EA43D6DE284F81A700E118D4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA43D6DD284F81A700E118D4 /* Product.swift */; };
 		EAAC89EA283E4F12006C641D /* ShoppingListAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC89E9283E4F12006C641D /* ShoppingListAppApp.swift */; };
 		EAAC89EC283E4F12006C641D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC89EB283E4F12006C641D /* ContentView.swift */; };
 		EAAC89EE283E4F16006C641D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAAC89ED283E4F16006C641D /* Assets.xcassets */; };
 		EAAC89F1283E4F16006C641D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAAC89F0283E4F16006C641D /* Preview Assets.xcassets */; };
 		EAAC89F9283E539A006C641D /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC89F8283E539A006C641D /* Background.swift */; };
-		EAD042072840DA4C002F72E4 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD042062840DA4C002F72E4 /* ViewRouter.swift */; };
 		EAD042092840E124002F72E4 /* AddListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD042082840E124002F72E4 /* AddListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA02709428461DAA0031914A /* NewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListView.swift; sourceTree = "<group>"; };
 		EA0270972846376A0031914A /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		EA027099284643F00031914A /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		EA43D6D9284F7B7900E118D4 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		EA43D6DB284F7BAE00E118D4 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
+		EA43D6DD284F81A700E118D4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		EAAC89E6283E4F12006C641D /* ShoppingListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAAC89E9283E4F12006C641D /* ShoppingListAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListAppApp.swift; sourceTree = "<group>"; };
 		EAAC89EB283E4F12006C641D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EAAC89ED283E4F16006C641D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAAC89F0283E4F16006C641D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EAAC89F8283E539A006C641D /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
-		EAD042062840DA4C002F72E4 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		EAD042082840E124002F72E4 /* AddListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +53,7 @@
 			children = (
 				EAAC89F8283E539A006C641D /* Background.swift */,
 				EA0270972846376A0031914A /* AddButton.swift */,
+				EA027099284643F00031914A /* MenuButton.swift */,
 			);
 			name = InterfaceElements;
 			sourceTree = "<group>";
@@ -72,7 +79,9 @@
 			children = (
 				EAAC89E9283E4F12006C641D /* ShoppingListAppApp.swift */,
 				EAAC89F7283E4F47006C641D /* Views */,
-				EAD042062840DA4C002F72E4 /* ViewRouter.swift */,
+				EA43D6D9284F7B7900E118D4 /* MainVM.swift */,
+				EA43D6DB284F7BAE00E118D4 /* FileManager-DocumentsDirectory.swift */,
+				EA43D6DD284F81A700E118D4 /* Product.swift */,
 				EAAC89ED283E4F16006C641D /* Assets.xcassets */,
 				EAAC89EF283E4F16006C641D /* Preview Content */,
 			);
@@ -168,11 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAD042072840DA4C002F72E4 /* ViewRouter.swift in Sources */,
 				EA0270982846376A0031914A /* AddButton.swift in Sources */,
 				EA02709528461DAA0031914A /* NewListView.swift in Sources */,
 				EAAC89EC283E4F12006C641D /* ContentView.swift in Sources */,
+				EA43D6DA284F7B7900E118D4 /* MainVM.swift in Sources */,
+				EA02709A284643F00031914A /* MenuButton.swift in Sources */,
+				EA43D6DC284F7BAE00E118D4 /* FileManager-DocumentsDirectory.swift in Sources */,
 				EAD042092840E124002F72E4 /* AddListView.swift in Sources */,
+				EA43D6DE284F81A700E118D4 /* Product.swift in Sources */,
 				EAAC89EA283E4F12006C641D /* ShoppingListAppApp.swift in Sources */,
 				EAAC89F9283E539A006C641D /* Background.swift in Sources */,
 			);

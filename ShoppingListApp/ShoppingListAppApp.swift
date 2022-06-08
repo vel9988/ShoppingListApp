@@ -9,11 +9,10 @@ import SwiftUI
 
 @main
 struct ShoppingListAppApp: App {
-    @StateObject var viewRouter = ViewRouter()
 
     var body: some Scene {
         WindowGroup {
-            ContentView(viewRouter: ViewRouter())
+            ContentView()
         }
     }
 }
